@@ -9,11 +9,17 @@ import org.springframework.stereotype.Service;
 import com.exam.userEntity.UserRegistrationEntity;
 import com.exam.userEntity.UserRegistrationEntityDao;
 import com.exam.userServices.UserRegistrationService;
+import com.exam.userinfo.UserInfo;
+
+import jakarta.persistence.Embedded;
 
 @Service
 public class UserRegistrationServiceimp implements UserRegistrationService {
 	@Autowired
 	UserRegistrationEntityDao userRegistrationEntityDao;
+	
+	@Embedded
+	UserInfo userInfo;
 
 	@Override
 	public UserRegistrationEntity createUser(UserRegistrationEntity user) {
