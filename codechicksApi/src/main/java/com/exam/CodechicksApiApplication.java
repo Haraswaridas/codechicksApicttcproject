@@ -8,6 +8,7 @@ public class CodechicksApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CodechicksApiApplication.class, args);
+		System.out.println("Code Chicks API..");
 	}
 
 }
